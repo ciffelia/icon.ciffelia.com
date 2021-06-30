@@ -24,6 +24,7 @@ const handler = async (
 
   response.status(200)
   response.setHeader('content-type', `image/${option.format}`)
+  response.setHeader('cache-control', 'public,max-age=31536000,immutable')
   generate(option).pipe(response)
 }
 
