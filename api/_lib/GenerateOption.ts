@@ -7,8 +7,9 @@ class GenerateOption {
   @IsPositive()
   size!: number
 
+  @Type(() => String)
   @IsIn(['jpeg', 'png', 'webp', 'gif', 'avif'])
-  format!: 'jpeg' | 'png' | 'webp' | 'gif' | 'avif'
+  format: 'jpeg' | 'png' | 'webp' | 'gif' | 'avif' = 'png'
 }
 
 export { GenerateOption }

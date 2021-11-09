@@ -9,7 +9,9 @@ const handler = async (
   request: VercelRequest,
   response: VercelResponse
 ): Promise<void> => {
-  const option = plainToClass(GenerateOption, request.query)
+  const option = plainToClass(GenerateOption, request.query, {
+    exposeDefaultValues: true
+  })
 
   const validationErrors = await validate(option, {
     forbidUnknownValues: true,
