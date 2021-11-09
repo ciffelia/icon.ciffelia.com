@@ -5,7 +5,7 @@ class GenerateOption {
   @Type(() => Number)
   @IsInt()
   @IsPositive()
-  size!: number
+  size: number = 512
 
   @Type(() => String)
   @IsIn(['jpeg', 'png', 'webp', 'gif', 'avif'])
