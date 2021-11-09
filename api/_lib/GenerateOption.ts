@@ -12,8 +12,8 @@ class GenerateOption {
   rounded: boolean = false
 
   @Type(() => String)
-  @IsIn(['jpeg', 'png', 'webp', 'gif', 'avif'])
-  format: 'jpeg' | 'png' | 'webp' | 'gif' | 'avif' = 'png'
+  @IsIn(['jpeg', 'png', 'webp', 'avif'])
+  format: 'jpeg' | 'png' | 'webp' | 'avif' = 'png'
 }
 
 export { GenerateOption }

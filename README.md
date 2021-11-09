@@ -14,7 +14,6 @@
 - `jpeg`
 - `png`
 - `webp`
-- `gif`
 - `avif`
 
 ## License
