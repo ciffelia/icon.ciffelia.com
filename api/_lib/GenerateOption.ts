@@ -1,11 +1,15 @@
 import { Type } from 'class-transformer'
-import { IsIn, IsInt, IsPositive } from 'class-validator'
+import { IsBoolean, IsIn, IsInt, IsPositive } from 'class-validator'
 
 class GenerateOption {
   @Type(() => Number)
   @IsInt()
   @IsPositive()
   size: number = 512
+
+  @Type(() => Boolean)
+  @IsBoolean()
+  rounded: boolean = false
 
   @Type(() => String)
   @IsIn(['jpeg', 'png', 'webp', 'gif', 'avif'])
